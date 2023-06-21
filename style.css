@@ -5,6 +5,9 @@ body {
 	align-content: center;
 	flex-wrap: wrap;
 }
+#gameContainer {
+    position: relative;
+}
 #gameTitle {
     text-align: center;
 }
@@ -34,4 +37,32 @@ body {
     
 }
 .container-score #score {}
-.container-score #finalScore {}
+#finalScore {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(0 0 0 / 70%);
+	z-index: 5;
+	height: 100%;
+	width: 100%;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    font-size: 30px;
+	text-transform: uppercase;
+}
+#play-again-button {
+    z-index: 10;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 20px;
+	font-size: 20px;
+}

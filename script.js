@@ -19,6 +19,9 @@ let ballSpawnInterval;
 
 let score;
 
+const playAgainButton = document.getElementById("play-again-button");
+const finalScoreElement = document.getElementById("finalScore");
+
 // Inizializzazione del gioco
 function startGame() {
   canvas = document.getElementById("gameCanvas");
@@ -31,11 +34,21 @@ function startGame() {
   playerSpeed = 1;
   diagonalSpeed = Math.sqrt(playerSpeed * playerSpeed) / 2;
   balls = [];
-  ballSize = 30;
+  ballSize = 50;
   ballSpeed = 1;
   ballSpawnInterval = 4000;
   score = 0;
   isGameOver = false;
+
+  const bestScore = getBestScore(); // Ottieni il punteggio migliore
+  document.getElementById("best-score").innerText = bestScore; // Aggiorna l'elemento HTML
+
+  playAgainButton.addEventListener("click", function () {
+    playAgainButton.removeEventListener("click", arguments.callee);
+    finalScoreElement.style.opacity = "0";
+    playAgainButton.style.opacity = "0";
+    startGame();
+  });
 
   document.addEventListener("keydown", handleKeyDown);
   document.addEventListener("keyup", handleKeyUp);
@@ -207,6 +220,13 @@ function spawnBall() {
   balls.push(ball);
 
   setTimeout(spawnBall, ballSpawnInterval);
+
+  console.log("- - - - - Score: " + score + " - - - - -");
+  console.log("playerSize:" + playerSize);
+  console.log("playerSpeed:" + playerSpeed);
+  console.log("ballSize:" + ballSize);
+  console.log("ballSpeed:" + playerSpeed);
+  console.log("ballSpawnInterval:" + ballSpawnInterval);
 }
 
 // Funzione per controllare la collisione tra il giocatore e le palline
@@ -223,21 +243,27 @@ function checkCollision() {
 
       score++;
 
-      if (playerSpeed < 50) {
+      if (playerSpeed < 40) {
         playerSpeed++;
       }
 
-      if (playerSize < 50) {
+      if (playerSize < 40) {
         playerSize++;
       }
 
-      if (ballSpawnInterval > 500) {
-        ballSpawnInterval -= 250;
+      if (ballSpeed < 60) {
+        ballSpeed++;
       }
 
-      if (ballSize > 5) {
+      if (ballSize > 3) {
         ballSize--;
       }
+
+      if (ballSpawnInterval > 250) {
+        ballSpawnInterval -= 100;
+      }
+
+      updateBestScore(score);
     }
   }
 }
@@ -250,12 +276,13 @@ function updateScore() {
 
 // Funzione per controllare la fine del gioco
 function checkGameOver() {
-  if (balls.length > 50) {
+  if (balls.length > 3) {
     isGameOver = true;
     clearInterval(gameInterval);
 
-    const finalScoreElement = document.getElementById("finalScore");
+    finalScoreElement.style.opacity = "1";
     finalScoreElement.innerText = "Game Over. Final Score: " + score;
+    playAgainButton.style.opacity = "1";
   }
 }
 
@@ -272,6 +299,20 @@ function updateGame() {
   checkCollision();
   updateScore();
   checkGameOver();
+}
+
+// Funzione per ottenere il punteggio migliore dal Local Storage
+function getBestScore() {
+  return localStorage.getItem("bestScore") || 0;
+}
+
+// Funzione per aggiornare il punteggio migliore nel Local Storage e a schermo
+function updateBestScore(score) {
+  const bestScore = getBestScore();
+  if (score > bestScore) {
+    localStorage.setItem("bestScore", score);
+    document.getElementById("best-score").innerText = score;
+  }
 }
 
 // Avvia il gioco
