@@ -2,7 +2,7 @@
 
 Il gioco "Eat Balls" è un minigioco divertente in cui il giocatore deve mangiare palline generarsi casualmente sullo schermo. L'obiettivo del gioco è mangiare il maggior numero possibile di palline senza farne accumulare più di 50 sullo schermo. Il punteggio migliore viene salvato e visualizzato durante il gioco.
 
-Caratteristiche
+# Caratteristiche
 - Visuale dall'alto per una chiara visione dell'ambiente di gioco.
 - Schermata home con il pulsante "Inizia partita" per avviare il gioco.
 - Controllo del personaggio con i tasti WASD per muoversi.
@@ -12,7 +12,7 @@ Caratteristiche
 - Salvataggio del punteggio migliore.
 - Interfaccia utente intuitiva.
 - 
-#Istruzioni
+# Istruzioni
 
 - Apri il file index.html nel tuo browser per avviare il gioco.
 - Clicca sul pulsante "Inizia partita" per iniziare a giocare.
@@ -21,9 +21,9 @@ Caratteristiche
 - Il gioco continua fino a quando il limite di palline viene superato.
 - Ottieni il punteggio migliore e cerca di migliorarlo ad ogni partita.
 
-#Requisiti di sistema
+# Requisiti di sistema
 
 - Browser web moderno con supporto per HTML5, CSS3 e JavaScript abilitato.
 
-#Licenza
+# Licenza
 Questo progetto è concesso in licenza sotto i termini della licenza MIT. Consulta il file LICENSE per ulteriori informazioni.
