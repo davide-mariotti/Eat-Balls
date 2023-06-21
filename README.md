@@ -1,11 +1,29 @@
-# Pallina-Game
+# Eat Balls
 
-"Pallina Game" è un divertente minigame che offre un'esperienza di gioco semplice ma coinvolgente. Il gioco si svolge su una visuale dall'alto, con un personaggio controllato dal giocatore e delle palline che si muovono casualmente sulla schermata.
+Il gioco "Eat Balls" è un minigioco divertente in cui il giocatore deve mangiare palline generarsi casualmente sullo schermo. L'obiettivo del gioco è mangiare il maggior numero possibile di palline senza farne accumulare più di 50 sullo schermo. Il punteggio migliore viene salvato e visualizzato durante il gioco.
 
-L'obiettivo del gioco è mangiare le palline che appaiono in modo casuale sulla schermata. Ogni volta che il giocatore riesce a mangiare una pallina, ne viene generata automaticamente un'altra in una posizione diversa. Il punteggio aumenta di uno ad ogni pallina mangiata.
+Caratteristiche
+- Visuale dall'alto per una chiara visione dell'ambiente di gioco.
+- Schermata home con il pulsante "Inizia partita" per avviare il gioco.
+- Controllo del personaggio con i tasti WASD per muoversi.
+- Palline che si muovono in modo casuale sullo schermo.
+- Aumento della velocità del giocatore, delle dimensioni del giocatore, della frequenza di generazione delle palline e diminuzione delle dimensioni delle palline ad ogni pallina mangiata.
+- Il gioco continua finché il giocatore mantiene meno di 50 palline sullo schermo.
+- Salvataggio del punteggio migliore.
+- Interfaccia utente intuitiva.
+- 
+#Istruzioni
 
-Il personaggio può essere controllato utilizzando i tasti WASD sulla tastiera. Il giocatore può spostare il personaggio verso l'alto (W), il basso (S), la sinistra (A) e la destra (D). Il movimento del personaggio è fluido e reattivo, consentendo al giocatore di navigare agilmente attraverso la schermata per catturare le palline.
+- Apri il file index.html nel tuo browser per avviare il gioco.
+- Clicca sul pulsante "Inizia partita" per iniziare a giocare.
+- Usa i tasti WASD per controllare il personaggio e mangiare le palline.
+- Evita di far accumulare più di 50 palline sullo schermo.
+- Il gioco continua fino a quando il limite di palline viene superato.
+- Ottieni il punteggio migliore e cerca di migliorarlo ad ogni partita.
 
-Il gioco presenta una schermata iniziale con il titolo "Pallina Game" e un pulsante "Inizia partita". Cliccando sul pulsante, il giocatore può avviare il gioco e iniziare a raccogliere le palline. Quando il gioco termina, viene mostrato il punteggio finale e il pulsante "Gioca di nuovo" per consentire al giocatore di riprovare.
+#Requisiti di sistema
 
-Grazie alla semplicità del gameplay e all'aspetto visuale accattivante, "Pallina Game" offre un'esperienza di gioco coinvolgente per gli appassionati di minigame. Che tu stia cercando una breve distrazione o un modo per mettere alla prova i tuoi riflessi, "Pallina Game" è un'opzione divertente e accattivante. Prova a giocarlo e cerca di ottenere il punteggio più alto possibile!
+- Browser web moderno con supporto per HTML5, CSS3 e JavaScript abilitato.
+
+#Licenza
+Questo progetto è concesso in licenza sotto i termini della licenza MIT. Consulta il file LICENSE per ulteriori informazioni.
