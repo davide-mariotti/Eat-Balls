@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+#gameTitle {
+    text-align: center;
+}
+/* Colore del BG */
+#gameCanvas {
+    background-color: #f2f2f2;
+}
+
+/* Colore delle palline */
+#gameCanvas .ball {
+    fill: #ff0000;
+}
+
+/* Colore e Dimensioni del personaggio */
+#gameCanvas .player {
+    fill: #0000ff;
+}
+.container-score {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+.container-score #ball-counter {
+    
+}
+.container-score #score {}
+.container-score #finalScore {}
