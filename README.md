@@ -11,7 +11,7 @@ Il gioco "Eat Balls" è un minigioco divertente in cui il giocatore deve mangiar
 - Il gioco continua finché il giocatore mantiene meno di 50 palline sullo schermo.
 - Salvataggio del punteggio migliore.
 - Interfaccia utente intuitiva.
-- 
+ 
 # Istruzioni
 
 - Apri il file index.html nel tuo browser per avviare il gioco.

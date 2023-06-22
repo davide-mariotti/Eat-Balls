@@ -276,7 +276,7 @@ function updateScore() {
 
 // Funzione per controllare la fine del gioco
 function checkGameOver() {
-  if (balls.length > 30) {
+  if (balls.length > 50) {
     isGameOver = true;
     clearInterval(gameInterval);
 
