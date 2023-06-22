@@ -244,23 +244,23 @@ function checkCollision() {
       score++;
 
       if (playerSpeed < 40) {
-        playerSpeed++;
+        playerSpeed += 0.5;
       }
 
-      if (playerSize < 40) {
-        playerSize++;
+      if (playerSize < 30) {
+        playerSize += 0.5;
       }
 
       if (ballSpeed < 60) {
-        ballSpeed++;
+        ballSpeed += 0.5;
       }
 
-      if (ballSize > 3) {
-        ballSize--;
+      if (ballSize > 5) {
+        ballSize -= 0.5;
       }
 
       if (ballSpawnInterval > 250) {
-        ballSpawnInterval -= 100;
+        ballSpawnInterval -= 50;
       }
 
       updateBestScore(score);
@@ -276,7 +276,7 @@ function updateScore() {
 
 // Funzione per controllare la fine del gioco
 function checkGameOver() {
-  if (balls.length > 3) {
+  if (balls.length > 30) {
     isGameOver = true;
     clearInterval(gameInterval);
 

@@ -7,6 +7,9 @@ body {
 }
 #gameContainer {
     position: relative;
+	width: 100%;
+	max-width: 1800px;
+	height: 100vh;
 }
 #gameTitle {
     text-align: center;
